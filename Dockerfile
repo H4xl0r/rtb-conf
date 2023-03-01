@@ -20,8 +20,8 @@ EXPOSE 22
 CMD ["/usr/sbin/sshd", "-D"]
 
 ADD ./setup/requirements.txt ./
-ADD ./files/rootthebox.cfg ./files/rootthebox.cfg
-ADD ./files/rootthebox.db ./files/rootthebox.db
+ADD ./files/rootthebox.cfg ./files/
+ADD ./files/rootthebox.db ./files/
 
 RUN pip install --no-cache-dir -r requirements.txt --upgrade
 
