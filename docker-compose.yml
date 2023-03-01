@@ -5,6 +5,6 @@ services:
     ports:
       - "11211:11211"
   rootthebox:
-    image: spamhunter/rootthebox-kubernetes:latest
+    image: spamhunter/rootthebox-kubernetes:beta
     ports:
       - "8888:8888"

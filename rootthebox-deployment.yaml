@@ -24,7 +24,7 @@ spec:
         io.kompose.service: rootthebox
     spec:
       containers:
-      - image: spamhunter/rootthebox-kubernetes:latest
+      - image: spamhunter/rootthebox-kubernetes:beta
         imagePullPolicy: ""
         name: rootthebox
         ports:
