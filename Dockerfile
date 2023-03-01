@@ -1,8 +1,3 @@
-####################################
-#
-#  Dockerfile for Root the Box
-#  v0.1.3 - By Moloch, ElJeffe
-
 FROM python:latest
 
 RUN mkdir /opt/rtb
@@ -26,8 +21,6 @@ CMD ["/usr/sbin/sshd", "-D"]
 
 ADD ./setup/requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt --upgrade
-RUN wget https://github.com/H4xl0r/rtb-conf/blob/main/rootthebox.cfg -o /opt/rtb/files/rootthebox.cfg
-RUN wget https://github.com/H4xl0r/rtb-conf/blob/main/rootthebox.db -o /opt/rtb/files/rootthebox.db
 
 VOLUME ["/opt/rtb/files"]
 ENTRYPOINT ["python3", "/opt/rtb/rootthebox.py", "--start"]
